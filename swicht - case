@@ -1,0 +1,55 @@
+/******************************************************************************
+
+conceitos
+
+
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int grau;
+    int aconta =0, bconta=0, cconta=0, dconta=0, econta= 0, fconta=0;
+    
+    printf ("entre com os conceitos. \n");
+    printf ("entre com o caractere EOF (fim) para finalizar as entradas. \n");
+    
+    while( (grau = getchar())!=-1)
+    {
+        switch (grau)
+        {
+            case 'a':
+                ++aconta;
+                break;
+            case 'b':
+                ++bconta;
+                break;
+            case 'c':
+                ++cconta;
+                break;
+            case 'd':
+                ++dconta;
+                break; 
+            case 'e':
+                ++econta;
+                break;
+            case 'f':
+                ++fconta;
+                break;
+            default:
+                printf ("conceito incorreto. Digite novamente\n");
+                break;
+        }
+    }
+    
+    printf ("\nOs totais decada conceito sao:");
+    printf ("a: %d\n",aconta);
+    printf ("b: %d\n",bconta);
+    printf ("c: %d\n",cconta);
+    printf ("d: %d\n",dconta);
+    printf ("e: %d\n",econta);
+    printf ("f: %d\n",fconta);
+    
+    return 0;
+}
