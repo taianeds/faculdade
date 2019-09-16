@@ -1,0 +1,63 @@
+/******************************************************************************
+
+Calculo da variavel usando do e while
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int numero;
+    int fatorial;
+    
+    do
+    {
+        printf("digite um numero: ");
+        scanf("%d",& numero);
+    
+        fatorial = 1;
+        while(numero>=1)
+        {
+           fatorial*= numero--;
+        }
+    
+        printf ("o fatorial %d\n",fatorial);
+    }
+    
+    while (numero >= 0);
+    
+    return 0;
+}
+
+
+
+/******************************************************************************
+
+// um numero com mais de 16bits// double: 64 bits  %f
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int numero;
+    double fatorial;
+    
+    do
+    {
+        printf("digite um numero: ");
+        scanf("%d",& numero);
+    
+        fatorial = 1;
+        while(numero>=1)
+        {
+           fatorial*= numero--;
+        }
+    
+        printf ("o fatorial %f\n",fatorial);
+    }
+    
+    while (numero >= 0);
+    
+    return 0;
+}
