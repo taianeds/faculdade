@@ -1,0 +1,86 @@
+/******************************************************************************
+
+neperiano x=1
+
+*******************************************************************************/
+
+   #include <stdio.h>
+
+int main()
+{
+    int i, j; //variaveis auxiliares
+    int iteracoes; //variavel para calculo de iteracoes
+    double fatorial; //calcular fatorial
+    double neperiano; // armazenar o valor do neperiano
+    
+    printf("digite o numero de interacoes: ");
+    scanf ("%d", &iteracoes);
+    
+    i= 1;
+    while (i<=iteracoes)
+    {
+        fatorial = 1;
+        j=i;
+        while (j >= 1)
+        {
+            fatorial *= j--;
+        }
+        neperiano += (float)1/fatorial;
+        i++;
+    }
+    printf("O numero neperiano com %d interacoes é %f", iteracoes, neperiano);
+    
+    return 0;
+}
+
+
+_______________________________________________________________________________________
+
+
+CHAMANDO OUTRA FUNÇÃO 
+
+/******************************************************************************
+
+neperiano x=1
+
+*******************************************************************************/
+
+   #include <stdio.h>
+
+double neperr (int); //PRECISA DEERMINAR OUTRA FUNÇÃO
+
+int main()
+{
+    int iteracoes; //variavel para calculo de iteracoes
+    double neperiano; // armazenar o valor do neperiano
+    
+    printf("digite o numero de interacoes: ");
+    scanf ("%d", &iteracoes);
+    
+    neperiano = neperr(iteracoes);
+    
+    printf("O numero neperiano com %d iteracoes é %f", iteracoes, neperiano);
+    
+    return 0;
+}
+
+double neperr (int iteracoes)
+{
+    double fatorial;
+    double neperiano;
+    int i, j;
+
+    i= 0;
+    while (i<=iteracoes)
+    {
+        fatorial = 1;
+        j=i;
+        while (j >= 1)
+        {
+            fatorial *= j--;
+        }
+        neperiano += (float)1/fatorial;
+        i++;
+    }
+    return neperiano;
+}
