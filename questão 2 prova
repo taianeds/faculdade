@@ -1,0 +1,69 @@
+/*
+    Questão 2 - Etapa II
+*/
+
+#include <stdio.h>
+
+//Protótipos de função
+int fatorial (int n);
+
+//Função principal
+int main()
+{
+   //Declaração de Variáveis
+   int leitura; //receberá o número do usuário
+   int resposta; //recebe a resposta do fatorial
+   int i; //variável auxiliar
+   
+   //Programa
+   printf("Digite um número: "); //prompt ao usuário
+   scanf("%d", &leitura); //faz a leitura do teclado
+   
+   //******* Se for menor ou igual a cinco
+   if (leitura < 5)
+   {
+       resposta = fatorial(leitura);
+       printf ("O fatorial de %d eh %d", leitura, resposta);
+   }
+   
+   //********* Se for maior que 10
+   if (leitura > 10)
+   {
+       for (i=1; i==1; i++)
+       {
+           printf("Leleko!\n");
+       }
+   }
+   
+   //*********Se estiver entre 6 e 10
+   if (leitura >= 5)
+   {
+       if (leitura <= 10)
+       {
+           for (i = 1; i <= leitura; i++)
+           {
+                printf("*");  
+           }
+       }
+   }
+   
+   return 0;
+}
+
+/////////////////////////////////////////////////////////
+int fatorial (int n)
+{
+    int i; //i será uma variável auxiliar
+    int fat; //fat armazenará o fatorial
+   
+    i = n; //iniciando o i
+    fat = 1;
+   
+    while (i>=1)
+    {
+        fat = fat * i;
+        i = i - 1;
+    }
+   
+    return fat;
+}
