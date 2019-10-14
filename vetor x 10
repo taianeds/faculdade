@@ -1,0 +1,29 @@
+/******************************************************************************
+
+digitar valor e apresentar o vetor multiplicado por 10
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+ float a[10];
+ int i;
+ 
+  
+  for(i=0; i<10; i++)
+  {
+       printf("digite o numero da posiçao %d ", i+1);
+       scanf("%f", &a[i]);
+  }
+  
+  printf ("\n\t");
+  
+  for (i=0; i<10; i++)
+  { 
+      printf ("%.2f\t", a[i]*10);
+  }
+  
+  
+  return 0;
+}
