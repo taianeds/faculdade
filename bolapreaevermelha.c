@@ -39,3 +39,44 @@ float bolavermelha(float v0,int t)
     
     vf = v0 + g*t;
 }
+
+
+/******************************************************************************
+outra forma de fazer
+*******************************************************************************/
+#include <stdio.h>
+
+float g = 9.8;
+
+float bolapreta (void);
+float bolavermelha (void);
+
+int main()
+{
+    
+    bolapreta();
+    bolavermelha();
+    
+    printf("a velocidade final da bola preta é: %.2f m/s,", bolapreta());
+    printf("\na velocidade final da bola vermelha é: %.2f m/s,",bolavermelha());
+
+    return 0;
+}
+
+float bolapreta()
+{
+    float v0 = 0;
+    int tp = 5;
+    int vf;
+    
+    vf = v0 + g*tp;
+}
+
+float bolavermelha()
+{
+    float v0= 0;
+    int tv = 3;
+    int vf;
+    
+    vf = v0 + g*tv;
+}
