@@ -1,7 +1,15 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
 #include <stdio.h>
 int matrizAelementos(int,int);
 int matrizBelementos(int,int);
-array soma(void);
+double soma(int, int, int, int);
 int a, b;
 int c, d;
 
@@ -19,14 +27,13 @@ int main()
     
     matrizBelementos(c,d);
    
-   int soma;
-   
-   soma(void);
+       
+    soma(a,b,c,d);
    
     return 0;
 }
 
-
+soma()
 int matrizAelementos(int n, int m)
 {
     
@@ -65,9 +72,38 @@ int matrizBelementos(int p, int q)
 
 }
 
-array soma(int a, int b, int c, int d)
-
-if (a=c && b=d)
+double soma(int a, int b, int c, int d)
 {
-    soma = matrizA [i][j] + MatrizB [i][j];
+    if (a==c && b==d)
+    {
+        int matrizA[a][b];
+        int matrizB[c][d];
+        int y;
+        
+        matrizA[a][b] = matrizAelementos(int n, int m);
+        matrizB[c][d] = matrizBelementos(int o, int p);
+        
+        printf ("o lemento 1 0 da matriz A eh %d", matrizA [1][0]);
+        
+        for (y=0; y<a; y++)
+        {
+            int z;
+            for (z=0; z<b;z++)
+            {
+                
+                int soma;
+            
+                soma = matrizA[y][z] + matrizB [y][z];
+            
+                printf("\n%d", soma);
+            
+                
+            }
+        }
+        
+    }
+    else
+    {
+        printf ("\nEsta operação não pode ser realizada pois as matrizes tem dimensoes diferentes");
+    }
 }
